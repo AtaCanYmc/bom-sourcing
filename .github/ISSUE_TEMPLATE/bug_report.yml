@@ -1,0 +1,50 @@
+name: Bug Report
+description: Report a defect in BOM extraction rules, schema contract, or sourcing instructions
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please verify the issue has not been reported before opening a new ticket.
+        For security vulnerability reports, refer to [SECURITY.md](../../SECURITY.md).
+  - type: textarea
+    id: summary
+    attributes:
+      label: Bug Description
+      description: Provide a clear and concise description of the bug.
+      placeholder: Describe what happened.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Step-by-step instructions to reproduce the behavior.
+      placeholder: |
+        1. Invoke bom-sourcing on project '...'
+        2. Inspect BOM output or sourcing query '...'
+        3. Observe defect '...'
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or Output Snippet
+      description: Paste relevant BOM output, tool error, or transcript excerpt without secrets.
+      render: shell
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Agent harness, model, and robo-market-search version if live mode was used.
+      placeholder: Claude Code / Antigravity, robo-market-search 0.x.x
+    validations:
+      required: true

@@ -1,0 +1,39 @@
+name: Feature Request
+description: Propose a new BOM rule, contract field, or sourcing adapter improvement
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please check existing issues and [ROADMAP.md](../../ROADMAP.md) to ensure this proposal is not already tracked.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: Describe the technical limitation or ambiguity this proposal resolves.
+      placeholder: When extracting a BOM from...
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Solution
+      description: Detail the requested rule, schema field, or workflow change.
+      placeholder: Add handling for...
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Describe any alternative approaches or workarounds you considered.
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Contributor Checklist
+      options:
+        - label: I searched existing issues and PRs before submitting this request.
+          required: true
+        - label: This proposal preserves offline privacy boundaries and anti-AI-slop documentation standards.
+          required: true

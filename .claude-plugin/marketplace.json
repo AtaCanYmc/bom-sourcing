@@ -1,0 +1,34 @@
+{
+  "name": "bom-sourcing",
+  "owner": {
+    "name": "AtaCanYmc",
+    "email": "atacanymc@gmail.com"
+  },
+  "metadata": {
+    "description": "Agent skill for traceable hardware and IoT Bill of Materials extraction and live sourcing via robo-market-search.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "bom-sourcing",
+      "source": "./",
+      "description": "Extract traceable Bills of Materials from hardware, IoT, maker, and software projects and compare live store pricing, stock, and carts with robo-market-search.",
+      "version": "0.1.0",
+      "author": {
+        "name": "AtaCanYmc",
+        "email": "atacanymc@gmail.com"
+      },
+      "homepage": "https://github.com/AtaCanYmc/bom-sourcing",
+      "repository": "https://github.com/AtaCanYmc/bom-sourcing",
+      "license": "MIT",
+      "keywords": [
+        "bom",
+        "hardware",
+        "iot",
+        "electronics",
+        "sourcing",
+        "robo-market-search"
+      ]
+    }
+  ]
+}

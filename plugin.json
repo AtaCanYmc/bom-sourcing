@@ -1,0 +1,28 @@
+{
+  "name": "bom-sourcing",
+  "displayName": "BOM Sourcing",
+  "version": "0.1.0",
+  "description": "Extract traceable Bills of Materials from hardware, IoT, maker, and software projects and compare live store pricing, stock, and carts with robo-market-search.",
+  "logo": "assets/logo.png",
+  "suggestedPrompts": [
+    "Extract an offline BOM with path:line evidence from this hardware project",
+    "Normalize components and identify missing power, wiring, or mounting parts",
+    "Run live BOM sourcing and compare single-store vs split-store carts via robo-market-search"
+  ],
+  "category": "Developer Tools",
+  "keywords": [
+    "bom",
+    "hardware",
+    "iot",
+    "electronics",
+    "sourcing",
+    "robo-market-search"
+  ],
+  "author": {
+    "name": "AtaCanYmc",
+    "url": "https://github.com/AtaCanYmc"
+  },
+  "homepage": "https://github.com/AtaCanYmc/bom-sourcing",
+  "repository": "https://github.com/AtaCanYmc/bom-sourcing",
+  "license": "MIT"
+}

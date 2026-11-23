@@ -18,6 +18,25 @@ jobs:
             test -f "$f" || (echo "Missing $f" && exit 1)
           done
 
+      - name: Validate Plugin and Config JSON Manifests
+        run: |
+          python3 -c '
+          import json
+          manifests = [
+              ".markdownlint.json",
+              "plugin.json",
+              "gemini-extension.json",
+              ".claude-plugin/plugin.json",
+              ".claude-plugin/marketplace.json",
+              ".cursor-plugin/plugin.json",
+          ]
+          for path in manifests:
+              with open(path, encoding="utf-8") as fh:
+                  data = json.load(fh)
+              assert isinstance(data, dict), f"{path} must be a JSON object"
+          print("JSON manifests verified.")
+          '
+
       - name: Validate Skill Frontmatter
         run: |
           python3 -c '

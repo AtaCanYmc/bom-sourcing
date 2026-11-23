@@ -43,17 +43,43 @@ flowchart TD
 
 ## Hızlı Başlangıç
 
-Depoyu klonlayın ve `bom-sourcing` yetenek klasörünü kodlama ajanınızın yetenek dizinine bağlayın.
+### Skills CLI (`npx skills`) ile Kurulum
+
+Yeteneği [skills](https://skills.sh) aracıyla desteklenen kodlama ajanlarına doğrudan kurun:
+
+```bash
+# Install into the current workspace
+npx skills add AtaCanYmc/bom-sourcing
+
+# Install globally across user agent configurations
+npx skills add AtaCanYmc/bom-sourcing -g
+```
+
+### Eklenti (Plugin) Olarak Kurulum
+
+Claude Code için:
+
+```bash
+/plugin marketplace add AtaCanYmc/bom-sourcing
+/plugin install bom-sourcing@bom-sourcing
+```
+
+Bu depoda yer alan desteklenen eklenti manifestleri:
+
+| Platform | Manifest Yolu |
+| :--- | :--- |
+| Claude Code | [.claude-plugin/plugin.json](.claude-plugin/plugin.json), [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) |
+| Cursor | [.cursor-plugin/plugin.json](.cursor-plugin/plugin.json) |
+| Antigravity | [plugin.json](plugin.json) |
+| Gemini CLI | [gemini-extension.json](gemini-extension.json) |
+
+### Manuel Sembolik Bağ
+
+Depoyu klonlayın ve `bom-sourcing` klasörünü yerel yetenek kök dizinine bağlayın:
 
 ```bash
 git clone https://github.com/AtaCanYmc/bom-sourcing.git
 cd bom-sourcing
-```
-
-Yerel bir ajan yetenek dizinine sembolik bağ oluşturun:
-
-```bash
-# Generic symlink into a local skills root
 mkdir -p ~/.agents/skills
 ln -s "$(pwd)/bom-sourcing" ~/.agents/skills/bom-sourcing
 ```
@@ -70,6 +96,11 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 
 ```text
 .
+├── .claude-plugin/
+│   ├── marketplace.json
+│   └── plugin.json
+├── .cursor-plugin/
+│   └── plugin.json
 ├── .editorconfig
 ├── .gitattributes
 ├── .github/
@@ -98,10 +129,12 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 ├── bom-sourcing/
 │   ├── README.md
 │   └── SKILL.md
-└── docs/
-    ├── README.md
-    ├── bom-contract.md
-    └── live-sourcing.md
+├── docs/
+│   ├── README.md
+│   ├── bom-contract.md
+│   └── live-sourcing.md
+├── gemini-extension.json
+└── plugin.json
 ```
 
 ## BOM Öğe Sözleşmesi

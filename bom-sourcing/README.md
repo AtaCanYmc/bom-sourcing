@@ -20,7 +20,13 @@ Instruction package for AI coding agents that extracts traceable Bills of Materi
 
 ## Installation
 
-Link or copy this directory into your agent's skill search path:
+Install with the Skills CLI:
+
+```bash
+npx skills add AtaCanYmc/bom-sourcing
+```
+
+Or link this directory manually into your agent's skill search path:
 
 ```bash
 ln -s "$(pwd)/bom-sourcing" ~/.agents/skills/bom-sourcing

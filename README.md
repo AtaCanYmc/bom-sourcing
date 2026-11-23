@@ -41,17 +41,43 @@ flowchart TD
 
 ## Quick Start
 
-Clone the repository and link the `bom-sourcing` skill folder into your coding agent's skills directory.
+### Install via Skills CLI (`npx skills`)
+
+Install the skill directly into supported coding agents with [skills](https://skills.sh):
+
+```bash
+# Install into the current workspace
+npx skills add AtaCanYmc/bom-sourcing
+
+# Install globally across user agent configurations
+npx skills add AtaCanYmc/bom-sourcing -g
+```
+
+### Install as a Plugin
+
+For Claude Code:
+
+```bash
+/plugin marketplace add AtaCanYmc/bom-sourcing
+/plugin install bom-sourcing@bom-sourcing
+```
+
+Supported plugin manifests shipped in this repository:
+
+| Platform | Manifest Path |
+| :--- | :--- |
+| Claude Code | [.claude-plugin/plugin.json](.claude-plugin/plugin.json), [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json) |
+| Cursor | [.cursor-plugin/plugin.json](.cursor-plugin/plugin.json) |
+| Antigravity | [plugin.json](plugin.json) |
+| Gemini CLI | [gemini-extension.json](gemini-extension.json) |
+
+### Manual Symlink
+
+Clone the repository and link the `bom-sourcing` folder into a local skills root:
 
 ```bash
 git clone https://github.com/AtaCanYmc/bom-sourcing.git
 cd bom-sourcing
-```
-
-Install into a local agent skills directory:
-
-```bash
-# Generic symlink into a local skills root
 mkdir -p ~/.agents/skills
 ln -s "$(pwd)/bom-sourcing" ~/.agents/skills/bom-sourcing
 ```
@@ -68,6 +94,11 @@ Invoke the skill from your agent prompt against any local project directory, spe
 
 ```text
 .
+├── .claude-plugin/
+│   ├── marketplace.json
+│   └── plugin.json
+├── .cursor-plugin/
+│   └── plugin.json
 ├── .editorconfig
 ├── .gitattributes
 ├── .github/
@@ -96,10 +127,12 @@ Invoke the skill from your agent prompt against any local project directory, spe
 ├── bom-sourcing/
 │   ├── README.md
 │   └── SKILL.md
-└── docs/
-    ├── README.md
-    ├── bom-contract.md
-    └── live-sourcing.md
+├── docs/
+│   ├── README.md
+│   ├── bom-contract.md
+│   └── live-sourcing.md
+├── gemini-extension.json
+└── plugin.json
 ```
 
 ## BOM Item Contract

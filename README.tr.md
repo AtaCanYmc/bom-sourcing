@@ -128,7 +128,9 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 │   └── logo.png
 ├── bom-sourcing/
 │   ├── README.md
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/
+│       └── interfaces.md
 ├── docs/
 │   ├── README.md
 │   ├── bom-contract.md

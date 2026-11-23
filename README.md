@@ -126,7 +126,9 @@ Invoke the skill from your agent prompt against any local project directory, spe
 │   └── logo.png
 ├── bom-sourcing/
 │   ├── README.md
-│   └── SKILL.md
+│   ├── SKILL.md
+│   └── references/
+│       └── interfaces.md
 ├── docs/
 │   ├── README.md
 │   ├── bom-contract.md

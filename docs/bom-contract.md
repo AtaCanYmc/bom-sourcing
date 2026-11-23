@@ -44,7 +44,7 @@ Every component extracted by `bom-sourcing` must populate all ten contract field
 | :--- | :--- |
 | `in_stock` | Observed store evidence confirms availability. |
 | `low_stock` | Store explicitly indicates low remaining stock. |
-| `out_of_stock` | Confirmed out of stock. Retain the item with `stok yok / alternatif aranmalı` in `notes`. |
+| `out_of_stock` | Confirmed out of stock. Retain the item with an out-of-stock note in the user's language (for example, `stok yok / alternatif aranmalı` or `out of stock / find alternative`) in `notes`. |
 | `unknown` | Offline mode, missing stock count, or unreliable availability signal. |
 
 ## Evidence and Unknowns
@@ -52,7 +52,7 @@ Every component extracted by `bom-sourcing` must populate all ten contract field
 - Distinguish runtime hardware from software-only dependencies, examples, tests, commented-out code, and alternative designs.
 - Reconcile duplicate references without merging electrically distinct variants. Cite all supporting files.
 - Report conflicting counts or specifications and request clarification instead of choosing silently.
-- Mark unverified critical specifications as `belirsiz / projeden doğrulanmalı`. Do not invent voltage ratings, battery chemistries, resistor values, connectors, or quantities.
+- Mark unverified critical specifications in the user's language (for example, `belirsiz / projeden doğrulanmalı` or `uncertain / verify from project`). Do not invent voltage ratings, battery chemistries, resistor values, connectors, or quantities.
 
 ## JSON Output Example
 

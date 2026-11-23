@@ -17,6 +17,7 @@ Instruction package for AI coding agents that extracts traceable Bills of Materi
 | File | Role |
 | :--- | :--- |
 | [SKILL.md](SKILL.md) | Canonical agent skill specification with YAML frontmatter, evidence rules, live sourcing protocol, and output format. |
+| [references/interfaces.md](references/interfaces.md) | `robo-market-search` CLI, Python SDK, MCP, and REST API discovery reference and optimizer caveats. |
 
 ## Installation
 

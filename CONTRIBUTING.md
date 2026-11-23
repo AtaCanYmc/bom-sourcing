@@ -32,12 +32,16 @@ When editing [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md):
 
 - Preserve the offline privacy guarantee: no network access when offline mode is requested, and no project files or secrets sent to catalog services.
 - Keep all BOM contract field names and enum values backward compatible unless proposing a versioned breaking change.
-- Update [README.md](README.md) and [bom-sourcing/README.md](bom-sourcing/README.md) whenever contract fields, enums, or supported interfaces change.
+- Update [schemas/bom-output.schema.json](schemas/bom-output.schema.json), `tests/fixtures/`, [README.md](README.md), [README.tr.md](README.tr.md), and [bom-sourcing/README.md](bom-sourcing/README.md) whenever contract fields, enums, or supported interfaces change.
 - Avoid marketing adjectives, em-dashes, and unverified claims in documentation.
 
 ## Local Verification
 
-Run the governance and link validation check from the repository root:
+Run schema validation, governance checks, and link validation from the repository root:
+
+```bash
+python3 scripts/validate_bom.py tests/fixtures/*.json
+```
 
 ```bash
 python3 -c '

@@ -28,6 +28,7 @@ jobs:
               "release-please-config.json",
               "plugin.json",
               "gemini-extension.json",
+              "schemas/bom-output.schema.json",
               ".claude-plugin/plugin.json",
               ".claude-plugin/marketplace.json",
               ".cursor-plugin/plugin.json",
@@ -38,6 +39,9 @@ jobs:
               assert isinstance(data, dict), f"{path} must be a JSON object"
           print("JSON manifests verified.")
           '
+
+      - name: Validate BOM Schema and Fixtures
+        run: python3 scripts/validate_bom.py tests/fixtures/*.json
 
       - name: Validate Skill Frontmatter
         run: |

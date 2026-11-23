@@ -1,0 +1,38 @@
+[
+  {
+    "raw_name": "ESP32-WROOM-32 dev board",
+    "canonical_name": "ESP32-WROOM-32 Development Board",
+    "quantity": 1,
+    "status": "confirmed",
+    "source_files": ["README.md:12", "platformio.ini:4"],
+    "constraints": { "supply_voltage": "5V USB / 3.3V logic", "interfaces": ["I2C", "UART"] },
+    "search_queries": ["ESP32-WROOM-32", "ESP32 geliştirme kartı"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Offline BOM extraction. Pin count and USB port type: uncertain / verify from project."
+  },
+  {
+    "raw_name": "BME280 environmental sensor",
+    "canonical_name": "BME280 I2C 3.3V Temperature Humidity Pressure Sensor Module",
+    "quantity": 1,
+    "status": "confirmed",
+    "source_files": ["src/main.cpp:18-24"],
+    "constraints": { "interface": "I2C", "supply_voltage": "3.3V", "address": "0x76" },
+    "search_queries": ["BME280 I2C 3.3V", "BME280 sensör modülü"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Offline BOM extraction. Do not substitute BMP280 (no humidity)."
+  },
+  {
+    "raw_name": "5V USB power supply and jumper wires (inferred)",
+    "canonical_name": "5V USB Power Cable and Female-to-Female Jumper Wires",
+    "quantity": null,
+    "status": "inferred_required",
+    "source_files": ["README.md:12", "src/main.cpp:18"],
+    "constraints": { "voltage": "5V", "pin_pitch": "2.54mm" },
+    "search_queries": ["dişi-dişi jumper kablo", "2.54mm jumper wire"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Inferred from ESP32 and I2C wiring. Exact cable connector and length: uncertain / verify from project."
+  }
+]

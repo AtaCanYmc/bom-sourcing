@@ -2,7 +2,7 @@
 
 # BOM Item Contract
 
-Every component extracted by `bom-sourcing` must populate all ten contract fields in both offline and live outputs.
+Every component extracted by `bom-sourcing` must populate all ten contract fields in both offline and live outputs. Machine-readable schema: [schemas/bom-output.schema.json](../schemas/bom-output.schema.json). Validate any JSON output array locally with `python3 scripts/validate_bom.py <file.json>`.
 
 ## Field Specification
 
@@ -79,4 +79,20 @@ When structured JSON is requested in Section 4 of [bom-sourcing/SKILL.md](../bom
     "notes": "Offline BOM extraction. Pin count and USB connector type: belirsiz / projeden doğrulanmalı."
   }
 ]
+```
+
+## Test Fixtures and Schema Validation
+
+Representative fixtures under `tests/fixtures/` cover key edge cases:
+
+| Fixture | Scenario |
+| :--- | :--- |
+| [offline-hardware.json](../tests/fixtures/offline-hardware.json) | Offline ESP32 and BME280 BOM with inferred power/wiring and `path:line` evidence. |
+| [conflicting-counts.json](../tests/fixtures/conflicting-counts.json) | Conflicting probe counts across files resolved to `quantity: null` with conflict note. |
+| [incompatible-variants.json](../tests/fixtures/incompatible-variants.json) | Rejected SPI-only and 5V-only candidates alongside a verified `exact` I2C 3.3V match. |
+
+Run the zero-dependency validator against all fixtures or any custom BOM JSON file:
+
+```bash
+python3 scripts/validate_bom.py tests/fixtures/*.json
 ```

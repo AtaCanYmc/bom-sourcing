@@ -142,12 +142,21 @@ Invoke the skill from your agent prompt against any local project directory, spe
 │   └── live-sourcing.md
 ├── gemini-extension.json
 ├── plugin.json
-└── release-please-config.json
+├── release-please-config.json
+├── schemas/
+│   └── bom-output.schema.json
+├── scripts/
+│   └── validate_bom.py
+└── tests/
+    └── fixtures/
+        ├── conflicting-counts.json
+        ├── incompatible-variants.json
+        └── offline-hardware.json
 ```
 
 ## BOM Item Contract
 
-Every extracted component must populate the following fields in both offline and live outputs. See [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md) for the complete specification.
+Every extracted component must populate the following fields in both offline and live outputs. See [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md) for the complete specification and [schemas/bom-output.schema.json](schemas/bom-output.schema.json) for the JSON Schema.
 
 | Field | Type | Contract |
 | :--- | :--- | :--- |
@@ -174,6 +183,12 @@ Live mode inspects the locally installed [robo-market-search](https://github.com
 | REST API | Inspect running server `/docs` or OpenAPI schema | `GET /api/v1/search?q=...`, `POST /api/v1/cart/optimize` |
 
 ## Verification
+
+Validate the BOM JSON schema and test fixtures locally:
+
+```bash
+python3 scripts/validate_bom.py tests/fixtures/*.json
+```
 
 Validate governance files, `SKILL.md` frontmatter, and internal markdown links locally with Python 3:
 

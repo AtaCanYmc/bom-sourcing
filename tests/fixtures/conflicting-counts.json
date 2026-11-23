@@ -1,0 +1,26 @@
+[
+  {
+    "raw_name": "DS18B20 waterproof temperature probe",
+    "canonical_name": "DS18B20 Waterproof 1-Wire Temperature Sensor Probe",
+    "quantity": null,
+    "status": "confirmed",
+    "source_files": ["README.md:9", "config/sensors.json:3-8"],
+    "constraints": { "interface": "1-Wire", "supply_voltage": "3.3V-5V", "waterproof": true },
+    "search_queries": ["DS18B20 su geçirmez sıcaklık sensörü", "DS18B20 waterproof probe"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Count conflict: README.md:9 lists 2 probes, config/sensors.json:3-8 defines 3 addresses. Clarification required before sourcing."
+  },
+  {
+    "raw_name": "4.7k pull-up resistor (inferred for 1-Wire bus)",
+    "canonical_name": "4.7k Ohm 1/4W Through-Hole Resistor",
+    "quantity": 1,
+    "status": "inferred_required",
+    "source_files": ["config/sensors.json:3-8"],
+    "constraints": { "resistance": "4.7kOhm", "interface": "1-Wire pull-up" },
+    "search_queries": ["4.7k ohm direnç", "4.7k resistor 0.25W"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Single shared pull-up assumed for one 1-Wire bus; verify if probes use separate GPIO pins."
+  }
+]

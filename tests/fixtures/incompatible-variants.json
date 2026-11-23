@@ -1,0 +1,26 @@
+[
+  {
+    "raw_name": "SSD1306 0.96 OLED I2C",
+    "canonical_name": "SSD1306 0.96 inch 128x64 I2C 3.3V OLED Display",
+    "quantity": 1,
+    "status": "confirmed",
+    "source_files": ["firmware/display.h:5-11", "docs/wiring.md:22"],
+    "constraints": { "interface": "I2C", "supply_voltage": "3.3V", "resolution": "128x64" },
+    "search_queries": ["0.96 OLED I2C 128x64", "SSD1306 I2C 3.3V ekran"],
+    "match_confidence": "unmatched",
+    "stock_status": "unknown",
+    "notes": "Candidate SPI-only 7-pin OLED rejected as incompatible with required I2C bus. Candidate 5V-only module without 3.3V compatibility rejected."
+  },
+  {
+    "raw_name": "INA219 current sensor",
+    "canonical_name": "INA219 I2C High-Side DC Current Sensor Breakout (3.3V-5V)",
+    "quantity": 1,
+    "status": "confirmed",
+    "source_files": ["firmware/power.cpp:14"],
+    "constraints": { "interface": "I2C", "supply_voltage": "3.3V", "max_bus_voltage": "26V" },
+    "search_queries": ["INA219 I2C akım sensörü", "INA219 breakout module"],
+    "match_confidence": "exact",
+    "stock_status": "in_stock",
+    "notes": "Verified I2C interface and 3.3V logic compatibility against candidate datasheet."
+  }
+]

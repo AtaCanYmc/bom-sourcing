@@ -144,12 +144,21 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 │   └── live-sourcing.md
 ├── gemini-extension.json
 ├── plugin.json
-└── release-please-config.json
+├── release-please-config.json
+├── schemas/
+│   └── bom-output.schema.json
+├── scripts/
+│   └── validate_bom.py
+└── tests/
+    └── fixtures/
+        ├── conflicting-counts.json
+        ├── incompatible-variants.json
+        └── offline-hardware.json
 ```
 
 ## BOM Öğe Sözleşmesi
 
-Çıkarılan her bileşen hem çevrimdışı hem de canlı çıktılarda aşağıdaki alanları doldurmalıdır. Tam spesifikasyon için [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md) dosyasına bakın.
+Çıkarılan her bileşen hem çevrimdışı hem de canlı çıktılarda aşağıdaki alanları doldurmalıdır. Tam spesifikasyon için [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md) ve JSON Şeması için [schemas/bom-output.schema.json](schemas/bom-output.schema.json) dosyalarına bakın.
 
 | Alan | Tür | Sözleşme |
 | :--- | :--- | :--- |
@@ -176,6 +185,12 @@ Canlı mod, herhangi bir arayüzü çağırmadan önce yerel kurulu [robo-market
 | REST API | Çalışan sunucunun `/docs` veya OpenAPI şemasını denetle | `GET /api/v1/search?q=...`, `POST /api/v1/cart/optimize` |
 
 ## Doğrulama
+
+BOM JSON şemasını ve test fixture dosyalarını yerel olarak doğrulayın:
+
+```bash
+python3 scripts/validate_bom.py tests/fixtures/*.json
+```
 
 Yönetişim dosyalarını, `SKILL.md` üst verisini ve iç Markdown bağlantılarını Python 3 ile yerel olarak doğrulayın:
 

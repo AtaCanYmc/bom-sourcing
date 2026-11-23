@@ -1,7 +1,13 @@
+<p align="center">
+  <img src="assets/logo.png" alt="bom-sourcing logo" width="140" />
+</p>
+
 # bom-sourcing
 
 [![CI](https://github.com/AtaCanYmc/bom-sourcing/actions/workflows/ci.yml/badge.svg)](https://github.com/AtaCanYmc/bom-sourcing/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
+English | [Türkçe](README.tr.md)
 
 Agent skill for extracting traceable Bills of Materials from hardware, IoT, maker, and software repositories, normalizing component names, identifying missing parts, and comparing live store pricing, stock, carts, and shipping through [robo-market-search](https://github.com/AtaCanYmc/robo-market-search).
 
@@ -82,11 +88,18 @@ Invoke the skill from your agent prompt against any local project directory, spe
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
+├── README.tr.md
 ├── ROADMAP.md
 ├── SECURITY.md
-└── bom-sourcing/
+├── assets/
+│   └── logo.png
+├── bom-sourcing/
+│   ├── README.md
+│   └── SKILL.md
+└── docs/
     ├── README.md
-    └── SKILL.md
+    ├── bom-contract.md
+    └── live-sourcing.md
 ```
 
 ## BOM Item Contract
@@ -125,7 +138,7 @@ Validate governance files, `SKILL.md` frontmatter, and internal markdown links l
 python3 -c '
 import glob, os, re, sys
 
-required = ["README.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md", "ROADMAP.md", "bom-sourcing/SKILL.md"]
+required = ["README.md", "README.tr.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md", "ROADMAP.md", "assets/logo.png", "bom-sourcing/SKILL.md"]
 missing = [f for f in required if not os.path.isfile(f)]
 if missing:
     print("Missing files:", missing, file=sys.stderr)
@@ -164,6 +177,7 @@ Yes. This repository is released under the MIT License, which permits private, i
 ## Governance & License
 
 - Skill specification: [bom-sourcing/SKILL.md](bom-sourcing/SKILL.md) and [bom-sourcing/README.md](bom-sourcing/README.md)
+- Reference documentation: [docs/README.md](docs/README.md), [docs/bom-contract.md](docs/bom-contract.md), and [docs/live-sourcing.md](docs/live-sourcing.md)
 - Contributing guidelines: [CONTRIBUTING.md](CONTRIBUTING.md)
 - Security policy: [SECURITY.md](SECURITY.md)
 - Roadmap: [ROADMAP.md](ROADMAP.md)

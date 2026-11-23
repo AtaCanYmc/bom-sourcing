@@ -14,7 +14,7 @@ jobs:
 
       - name: Verify Essential Governance Files
         run: |
-          for f in README.md LICENSE CONTRIBUTING.md SECURITY.md ROADMAP.md bom-sourcing/SKILL.md bom-sourcing/README.md; do
+          for f in README.md README.tr.md LICENSE CONTRIBUTING.md SECURITY.md ROADMAP.md assets/logo.png bom-sourcing/SKILL.md bom-sourcing/README.md; do
             test -f "$f" || (echo "Missing $f" && exit 1)
           done
 
@@ -33,8 +33,8 @@ jobs:
 
       - name: Run Anti-AI-Slop Linter
         run: |
-          FORBIDDEN="seamlessly|blazingly fast|cutting-edge|revolutionary|comprehensive and robust|effortlessly"
-          for f in README.md bom-sourcing/README.md CONTRIBUTING.md SECURITY.md ROADMAP.md; do
+          FORBIDDEN="seamlessly|blazingly fast|cutting-edge|revolutionary|comprehensive and robust|effortlessly|kesintisiz entegrasyon|ışık hızında|son teknoloji|devrim niteliğinde|zahmetsizce"
+          for f in README.md README.tr.md bom-sourcing/README.md CONTRIBUTING.md SECURITY.md ROADMAP.md docs/*.md; do
             if grep -E -i "$FORBIDDEN" "$f"; then
               echo "::error file=$f::Forbidden marketing buzzwords found in documentation"
               exit 1

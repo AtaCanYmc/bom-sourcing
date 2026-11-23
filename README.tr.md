@@ -118,6 +118,7 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 │       └── release-please.yml
 ├── .gitignore
 ├── .markdownlint.json
+├── .release-please-manifest.json
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
@@ -136,7 +137,8 @@ Herhangi bir yerel proje dizini üzerinde çevrimdışı BOM çıkarımı veya t
 │   ├── bom-contract.md
 │   └── live-sourcing.md
 ├── gemini-extension.json
-└── plugin.json
+├── plugin.json
+└── release-please-config.json
 ```
 
 ## BOM Öğe Sözleşmesi

@@ -116,6 +116,7 @@ Invoke the skill from your agent prompt against any local project directory, spe
 │       └── release-please.yml
 ├── .gitignore
 ├── .markdownlint.json
+├── .release-please-manifest.json
 ├── CONTRIBUTING.md
 ├── LICENSE
 ├── README.md
@@ -134,7 +135,8 @@ Invoke the skill from your agent prompt against any local project directory, spe
 │   ├── bom-contract.md
 │   └── live-sourcing.md
 ├── gemini-extension.json
-└── plugin.json
+├── plugin.json
+└── release-please-config.json
 ```
 
 ## BOM Item Contract

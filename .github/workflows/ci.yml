@@ -24,6 +24,8 @@ jobs:
           import json
           manifests = [
               ".markdownlint.json",
+              ".release-please-manifest.json",
+              "release-please-config.json",
               "plugin.json",
               "gemini-extension.json",
               ".claude-plugin/plugin.json",

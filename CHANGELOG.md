@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/AtaCanYmc/bom-sourcing/compare/v0.1.1...v0.1.2) (2026-11-23)
+
+
+### Features
+
+* add BOM output schema and validation script, enhance documentation and test fixtures ([372dcf1](https://github.com/AtaCanYmc/bom-sourcing/commit/372dcf1b3862c6a6aa89c593bd16142f37c16301))
+* update README files with new badges for release, last commit, license, and agent skill ([2f850fa](https://github.com/AtaCanYmc/bom-sourcing/commit/2f850fa850a9c83d7e94ad1fd414f11ee024e0d9))
+
 ## [0.1.1](https://github.com/AtaCanYmc/bom-sourcing/compare/v0.1.0...v0.1.1) (2026-11-23)
 
 

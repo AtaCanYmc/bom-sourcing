@@ -5,7 +5,13 @@
 # bom-sourcing
 
 [![CI](https://github.com/AtaCanYmc/bom-sourcing/actions/workflows/ci.yml/badge.svg)](https://github.com/AtaCanYmc/bom-sourcing/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/AtaCanYmc/bom-sourcing?include_prereleases&label=release)](https://github.com/AtaCanYmc/bom-sourcing/releases)
+[![Last Commit](https://img.shields.io/github/last-commit/AtaCanYmc/bom-sourcing)](https://github.com/AtaCanYmc/bom-sourcing/commits/main)
+[![License: MIT](https://img.shields.io/github/license/AtaCanYmc/bom-sourcing)](LICENSE)
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-FE5196?logo=conventionalcommits&logoColor=white)](https://www.conventionalcommits.org)
+[![Agent Skill](https://img.shields.io/badge/Agent%20Skill-npx%20skills-0D1117?logo=npm&logoColor=white)](#install-via-skills-cli-npx-skills)
+[![Plugins](https://img.shields.io/badge/Plugins-Claude%20%7C%20Cursor%20%7C%20Antigravity%20%7C%20Gemini-38BDF8)](#install-as-a-plugin)
+[![Upstream: robo-market-search](https://img.shields.io/badge/Upstream-robo--market--search-F59E0B?logo=github&logoColor=white)](https://github.com/AtaCanYmc/robo-market-search)
 
 English | [Türkçe](README.tr.md)
 

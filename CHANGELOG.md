@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/AtaCanYmc/bom-sourcing/compare/v0.1.2...v0.1.3) (2026-11-26)
+
+
+### Documentation
+
+* upgrade workflow architecture diagrams ([f1e75d3](https://github.com/AtaCanYmc/bom-sourcing/commit/f1e75d3af67928f486d7d9df697523db138b7392))
+
 ## [0.1.2](https://github.com/AtaCanYmc/bom-sourcing/compare/v0.1.1...v0.1.2) (2026-11-23)
 
 

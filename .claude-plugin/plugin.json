@@ -1,6 +1,6 @@
 {
   "name": "bom-sourcing",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Extract traceable Bills of Materials from hardware, IoT, maker, and software projects and compare live store pricing, stock, and carts with robo-market-search.",
   "author": {
     "name": "AtaCanYmc",

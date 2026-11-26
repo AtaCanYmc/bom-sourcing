@@ -32,18 +32,7 @@ Agent skill for extracting traceable Bills of Materials from hardware, IoT, make
 
 The skill separates offline evidence extraction from optional live catalog queries. Network tools are never called during offline BOM generation.
 
-```mermaid
-flowchart TD
-    A["Project Repository"] --> B["1. Choose Scope"]
-    B --> C["2. Discover Project Evidence"]
-    C --> D["Normalize Parts & Infer Missing Items"]
-    D --> E{"Live Sourcing Requested?"}
-    E -->|"No (Offline)"| F["4. Deliver Offline BOM Table & JSON"]
-    E -->|"Yes (Live)"| G["3. Query robo-market-search"]
-    G --> H["Verify Specs, Stock & Shipping"]
-    H --> I["Compare Single-Store vs Split-Store Carts"]
-    I --> F
-```
+![BOM Sourcing Workflow Architecture](assets/workflow-architecture.svg)
 
 ## Quick Start
 

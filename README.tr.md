@@ -34,18 +34,7 @@ Donanım, IoT, maker ve yazılım depolarından izlenebilir Malzeme Listesi (BOM
 
 Yetenek, çevrimdışı kanıt çıkarımı ile isteğe bağlı canlı katalog sorgularını birbirinden ayırır. Çevrimdışı BOM üretimi sırasında ağ araçları çağrılmaz.
 
-```mermaid
-flowchart TD
-    A["Proje Deposu"] --> B["1. Kapsam Seçimi"]
-    B --> C["2. Proje Kanıtlarını Keşfet"]
-    C --> D["Parçaları Normalleştir ve Eksikleri Çıkar"]
-    D --> E{"Canlı Tedarik İstendi mi?"}
-    E -->|"Hayır (Çevrimdışı)"| F["4. Çevrimdışı BOM Tablosu ve JSON Teslim Et"]
-    E -->|"Evet (Canlı)"| G["3. robo-market-search Sorgula"]
-    G --> H["Teknik Özellik, Stok ve Kargo Doğrula"]
-    H --> I["Tek Mağaza ve Bölünmüş Sepetleri Karşılaştır"]
-    I --> F
-```
+![BOM Tedarik İş Akışı Mimarisi](assets/workflow-architecture.tr.svg)
 
 ## Hızlı Başlangıç
 
